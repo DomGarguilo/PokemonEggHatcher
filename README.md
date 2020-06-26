@@ -13,7 +13,7 @@ brightness of the area on the screen which allows for synchronization of in-game
 
 Implementation Details
 ![Image of Yaktocat]
-(https://github.com/DomGarguilo/PokemonEggHatcher/blob/master/images/1.png?raw=true)
+(./images/1.png)
 Pictured: Arduino and Components of GameCube controller and Printed Circuit Board
 To implement our project, we used a deconstructed GameCube controller. The
 GameCube controller was taken apart and the Printed Circuit Board (PCB) was extracted. The
