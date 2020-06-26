@@ -13,7 +13,7 @@ brightness of the area on the screen which allows for synchronization of in-game
 
 Implementation Details
 ![Image of Yaktocat]
-(https://imgur.com/RB65Byc)
+(https://i.imgur.com/O3QYtwf.png)
 Pictured: Arduino and Components of GameCube controller and Printed Circuit Board
 To implement our project, we used a deconstructed GameCube controller. The
 GameCube controller was taken apart and the Printed Circuit Board (PCB) was extracted. The
