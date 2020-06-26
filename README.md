@@ -12,7 +12,7 @@ against the screen to measure certain light values on the screen. This light sen
 brightness of the area on the screen which allows for synchronization of in-game events.
 
 Implementation Details
-![Image of Yaktocat](./images/1.png)
+![Overview image](./images/1.png)
 Pictured: Arduino and Components of GameCube controller and Printed Circuit Board  
 To implement our project, we used a deconstructed GameCube controller. The
 GameCube controller was taken apart and the Printed Circuit Board (PCB) was extracted. The
@@ -30,11 +30,14 @@ operate the same way. There is a data line leading to a bridge on the PCB which 
 in this case is 3.3v. When the button is pressed, a conductive pad on the underside of the button
 is lowered, closing a gap between the data line at 3.3v and a grounded line completing the circuit
 and bringing the data line to ground. This is how the controller knows when a button is pressed.
-To simulate the button press from the Arduino, we used a relay module as pictured below.Pictured: Relay modules
+To simulate the button press from the Arduino, we used a relay module as pictured below.  
+![image of relay board](./images/2.png)
+Pictured: Relay modules
 Each of the blue boxes depicted in the middle is a separate relay. The relays work by
 switching an input line (Common) between two other lines (‘normally open’ which is not
 connected to common and ‘normally closed’ which is connected to common). In our case, we
 soldered wires to the spot on the PCB where the button lines are (pictured below).  
+![image of PCB](./images/3.png)
 Pictured: Soldered wires on the Printed Circuit Board  
 We then fed each of those wires to the common slot on a relay. One relay for each button
 line. We left the “normally closed” slot free and put a grounded wire in the “normally open” slot.
@@ -50,6 +53,7 @@ output lines read 0v each. When pressed all the way to the right and all the way
 lines read 3.3v each. Knowing this, we needed to replicate these readings and feed it back into
 the joystick output lines. To do this, we acquired two DACs (pictured below) which allowed us
 to output the analog signal that we needed at varying voltages.  
+![DAC's](./images/4.png)
 Pictured: y-axis and x-axis Digital to Analog Converters  
 One DAC for the y-axis and one DAC for the x-axis. For example, if we want the game
 to register a downward movement, we set the respective DAC to 0v. When no movement is
@@ -57,6 +61,7 @@ wanted, we hold both DACs at a constant middle voltage.
 The third and final main hardware component is the LDR. The LDR is taped to the screen
 displaying the game and measures the brightness and returns a corresponding integer to the
 Arduino.  
+![LDR](./images/5.png)
 Pictured: Light-Dependent Resistor  
 This integer value is used in the code to determine when certain in-game events are
 taking place. For this application, we used the LDR to determine when dialog boxes appear. This
