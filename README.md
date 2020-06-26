@@ -12,6 +12,7 @@ against the screen to measure certain light values on the screen. This light sen
 brightness of the area on the screen which allows for synchronization of in-game events.
 
 Implementation Details
+![Image of Yaktocat]
 (https://imgur.com/RB65Byc)
 Pictured: Arduino and Components of GameCube controller and Printed Circuit Board
 To implement our project, we used a deconstructed GameCube controller. The
